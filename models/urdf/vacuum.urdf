@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="box.SLDPRT">
+  <link
+    name="box.SLDPRT">
+    <inertial>
+      <origin
+        xyz="1.2996E-17 1.20353843572399E-16 0.16926"
+        rpy="0 0 0" />
+      <mass
+        value="0.99" />
+      <inertia
+        ixx="1.73042"
+        ixy="-1.2824E-17"
+        ixz="-2.8299E-17"
+        iyy="1.73042"
+        iyz="2.85579897269348E-17"
+        izz="1.0053" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="models/meshes/vacuum/vacuum.obj" scale="1 1 1"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.7 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="models/meshes/vacuum/vacuum.obj" scale="1 1 1"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

@@ -1,0 +1,13 @@
+#
+# Bunkspeed OBJ Material File
+# http://www.bunkspeed.com
+#
+
+newmtl dark_concrete_2d
+Kd 1 1 1
+map_Kd dark concrete.jpg
+Ks 1 1 1
+map_bump -bm 2 darkconcrete_n.dds
+bump darkconcrete_n.dds
+illum 2
+Ns 99.90109

@@ -1,0 +1,29 @@
+#
+# Bunkspeed OBJ Material File
+# http://www.bunkspeed.com
+#
+
+newmtl old_english_brick_2d
+Kd 1 1 1
+map_Kd old english brick.jpg
+Ks 1 1 1
+map_bump -bm 2 oldenglishbrick_n.dds
+bump oldenglishbrick_n.dds
+illum 2
+Ns 99.90109
+
+newmtl laminate3_2d
+Kd 1 1 1
+map_Kd laminate3.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 6.737052
+
+newmtl flemish_brick_2d
+Kd 1 1 1
+map_Kd C:flemish brick.jpg
+Ks 1 1 1
+map_bump -bm 2 flemishbrick_normalmap.dds
+bump flemishbrick_normalmap.dds
+illum 2
+Ns 99.90109

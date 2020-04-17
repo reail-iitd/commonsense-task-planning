@@ -1,0 +1,40 @@
+{
+	"actions":[
+		{
+			"name": "placeRamp",
+			"args": []
+		},
+		{
+			"name": "moveTo",
+			"args": ["board"]
+		},
+		{
+			"name": "pick",
+			"args": ["board"]
+		},
+		{
+			"name": "moveUp",
+			"args": []
+		},
+		{
+			"name": "stick",
+			"args": ["board", "wall_warehouse"]
+		},
+		{
+			"name": "pickNplaceAonB",
+			"args": ["nail", "board"]
+		},
+		{
+			"name": "moveTo",
+			"args": ["hammer"]
+		},
+		{
+			"name": "pick",
+			"args": ["hammer"]
+		},
+		{
+			"name": "drive",
+			"args": ["nail", "hammer"]
+		}
+	]
+}

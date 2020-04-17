@@ -1,0 +1,403 @@
+#
+# Bunkspeed OBJ Material File
+# http://www.bunkspeed.com
+#
+
+newmtl polished_pine_2d
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-2
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-2
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-2
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-2
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-2
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-2
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-3
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-3
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-3
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-3
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-3
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-3
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-3
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-3
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-5
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-5
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-5
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-5
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-3
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-3
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-3
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-3
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-3
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-3
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-3
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-3
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-3
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-3
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-3
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-5
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-5
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-5
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-5
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-3
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-3
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-3
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-3
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-3
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-3
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-3
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-3
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-3
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-3
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-3
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-5
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-5
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-5
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-5
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-3
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-3
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl polished_pine_2d-3
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl Basic_Wood
+Kd 1 1 1
+map_Kd 764fd9c9-44d4-4461-903a-2fa5d5a6377d.dds
+Ks 0.5 0.5 0.5
+illum 2
+Ns 6.888278
+
+newmtl polished_pine_2d-5
+Kd 1 1 1
+map_Kd polished pine.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109

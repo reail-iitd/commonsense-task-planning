@@ -1,0 +1,24 @@
+{
+	"actions":[
+		{
+			"name": "changeState",
+			"args": ["cupboard", "open"]
+		},
+		{
+			"name": "pickNplaceAonB",
+			"args": ["apple", "box"]
+		},
+		{
+			"name": "pickNplaceAonB",
+			"args": ["banana", "box"]
+		},
+		{
+			"name": "pickNplaceAonB",
+			"args": ["orange", "box"]
+		},
+		{
+			"name": "pickNplaceAonB",
+			"args": ["box", "cupboard"]
+		}
+	]
+}

@@ -1,0 +1,11 @@
+#
+# Bunkspeed OBJ Material File
+# http://www.bunkspeed.com
+#
+
+newmtl laminate3_2d
+Kd 1 1 1
+map_Kd laminate3.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 6.737052

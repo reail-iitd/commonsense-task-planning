@@ -1,0 +1,13 @@
+#
+# Bunkspeed OBJ Material File
+# http://www.bunkspeed.com
+#
+
+newmtl Tortoise_Shell
+Kd 1 1 1
+Ks 0.5 0.5 0.5
+map_Kd brick.jpg
+map_Ks brick.jpg
+illum 2
+Ns 28.57038
+d 0.3019608

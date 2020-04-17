@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="apple">
+  <link name="base_link">
+    <contact>
+      <lateral_friction value="0.5"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin
+        xyz="0 0 0.2"
+        rpy="0 0 0" />
+      <mass
+        value="1.99" />
+      <inertia
+        ixx="1.73042"
+        ixy="-1.2824E-17"
+        ixz="-2.8299E-17"
+        iyy="1.73042"
+        iyz="2.85579897269348E-17"
+        izz="1.0053" />
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 3.14" xyz="0 0 0.2"/>
+      <geometry>
+        <mesh filename="models/meshes/trolley/trolley.stl" scale="10 10 10"/>
+      </geometry>
+      <material name="hi">
+        <color rgba="0.5724 0.168 0.012 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 3.14" xyz="0 0 0.2"/>
+      <geometry>
+        <mesh filename="models/meshes/trolley/trolley.stl" scale="10 10 10"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

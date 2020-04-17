@@ -1,0 +1,16 @@
+#
+# Bunkspeed OBJ Material File
+# http://www.bunkspeed.com
+#
+
+newmtl polished_teak_2d
+Kd 1 1 1
+map_Kd polished teak.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl black
+Kd 0.1019608 0.1019608 0.1019608
+Ks 0.5 0.5 0.5
+illum 2

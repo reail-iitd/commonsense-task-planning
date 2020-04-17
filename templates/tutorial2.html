@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.css" />
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>	
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<title>RoboMove</title>
+</head>
+<body>
+	<div class="row">
+	  <div class="col-sm-6" style="padding-left: 2em; overflow-y: scroll;height: 800px;">
+	  		<h1>Tutorial</h1>
+	  		<p>Complete the tasks given below. After completing, click on next.</p>
+			<h4>Explore (Discover where different objects are kept)</h4>
+			{% for object in world_objects %}
+				<button id="{{object}}" class="btn btn-info">{{object}}</button>
+			{% endfor %}
+	  		<h2> Task Description (Goal to achieve) <span id="time" style="color: red;">10:00</span> </h2>
+	  		<p> Complete the following tasks. </p>
+	  		<ol>
+	  			<li id = "Ans1" style="color: red;">Find the cupboard using the buttons in the explore section.</li>
+	  			<li id="Ans2" style="color: red;">Use the rotate buttons.</li>
+	  		</ol>
+	  		<h2>Instruction Input</h2>
+			<select class="form-control" id="predicate_dropdown" data-live-search="true">
+				<option selected="selected"> Select the verb/predicate you want </option>
+				{% for i in list_of_predicates %}
+					<option> {{ i }} </option>
+				{% endfor %}
+			</select>
+			<label for="predicate"> ( </label>
+  			<div id = "arguments">
+	  		</div>
+	  		) <br/>
+	  		<div class="row" style="padding-left: 30em">
+	  			<div>
+		  			<button type="button" class="btn btn-success" id="execute_move">Execute Move</button>
+		  		</div>
+		  		<div>
+		  			<button type="button" class="btn btn-danger" id="undo_move">Undo Move</button>
+		  		</div>
+		  	</div>
+		  	<div id = "move_list_div" style="background-color: yellow;">
+			  	<h3> Move list </h3>
+		  		<ol id = "move_list">
+		  		</ol>
+		  	</div>
+		  	<div>
+		  		<button class="btn btn-success" disabled="true" id="next-tut" style="width: 100%;">Next</button>
+		  	</div>
+	  </div>
+		<div class="col-sm-6">
+		  <div class = "row">
+		  	<img src="{{ url_for('get_simulator_state') }}" style="width: 100%;">
+		  </div>
+		  <div class="row">
+		    <div class="col-sm-2">
+				<div class="custom-control custom-switch">
+				  <input type="checkbox" class="custom-control-input" id="toggleView" onclick="toggle()">
+				  <label class="custom-control-label" for="toggleView">Toggle view</label>
+				</div>
+			</div>
+			<div class="col-sm-2">
+				<img src="{{base_url}}/static/up.png" style="width:50px;height:50px;" alt="Zoom in" onclick="zoomIn()">
+			</div>
+			<div class="col-sm-2">
+				<img src="{{base_url}}/static/down.png" style="width:50px;height:50px;" alt="Zoom Out" onclick="zoomOut()">
+			</div>
+		  	<div class="col-sm-2">
+		  		<img src="{{base_url}}/static/left.png" style="width:50px;height:50px;" alt="Rotate camera left" onclick="rotateLeft()">
+			</div>
+		  	<div class="col-sm-2">
+		  		<img src="{{base_url}}/static/right.png" style="width:50px;height:50px;" alt="Rotate camera right" onclick="rotateRight()">
+		  	</div>
+		  </div>
+		  <div class="row">
+		  	<h4>General Instructions</h4>
+			<ul>
+				<li><strong>Please take a look at the sample example which has been provided before starting.</strong></li>
+				<li>Keep in mind the weight, feel and physical properties. We have tried to simulate the real world.</li>
+				<li>Please refrain from giving instructions not possible in the real world. However we support creativity.</li>
+			</ul>
+		  </div>
+		</div>
+	</div>
+	<script>
+		var second = false;
+		var first = false;
+		$( function() {
+	    $( "#accordion" ).accordion({
+	      collapsible: true
+	    });
+	  } );
+		function zoomIn(){
+			$.ajax({
+		      url: "{{base_url}}/zoomIn",
+		      type: "post",
+		      data: {direction: "up"},
+		      success: function(response) {
+		      },
+		      error: function(xhr) {
+		      }
+		    });
+		}
+		function toggle(){
+			$.ajax({
+		      url: "{{base_url}}/toggle",
+		      type: "post",
+		      data: {direction: "toggle"},
+		      success: function(response) {
+		      },
+		      error: function(xhr) {
+		      }
+		    });
+		}
+		function zoomOut(){
+			$.ajax({
+		      url: "{{base_url}}/zoomOut",
+		      type: "post",
+		      data: {direction: "down"},
+		      success: function(response) {
+		      },
+		      error: function(xhr) {
+		      }
+		    });
+		}
+		function rotateLeft(){
+			$("#Ans2").css('color', 'green');
+			second = true;
+			if (first && second){
+				$('#next-tut').prop('disabled', false);
+			}
+			$.ajax({
+		      url: "{{base_url}}/rotateCameraRight",
+		      type: "post",
+		      data: {direction: "left"},
+		      success: function(response) {
+		      },
+		      error: function(xhr) {
+		      }
+		    });
+		}
+		function rotateRight(){
+			$("#Ans2").css('color', 'green');
+			if (first && second){
+				$('#next-tut').prop('disabled', false);
+			}
+			second = true;
+			$.ajax({
+		      url: "{{base_url}}/rotateCameraLeft",
+		      type: "post",
+		      data: {direction: "right"},
+		      success: function(response) {
+		      },
+		      error: function(xhr) {
+		      }
+		    });
+		}
+		$("#predicate_dropdown").change(function(){
+		    var text = $(this).val();
+
+		    $.ajax({
+		      url: "{{base_url}}/arguments",
+		      type: "get",
+		      data: {predicate: text},
+		      success: function(response) {
+		        $("#arguments").html(response);
+		      },
+		      error: function(xhr) {
+		        //Do Something to handle error
+		      }
+		    });
+		});
+		$("#execute_move").click(function(){
+			var i = 0;
+			var data_for_arguments = {};
+			data_for_arguments["predicate"] = $("#predicate_dropdown").val();
+			while (true){
+				var arg = "arg" + i;
+				var text = $("#"+arg).val();
+				if (typeof text == "undefined"){
+					break;
+				}
+				data_for_arguments[arg] = text;
+				console.log(data_for_arguments);
+				i += 1;
+			}
+			$.ajax({
+		      url: "{{base_url}}/execute_move",
+		      type: "post",
+		      data: data_for_arguments,
+		      success: function(response) {
+		      	$("#move_list").append("<li> " + response + " </li>")
+		      },
+		      error: function(xhr) {
+		      }
+		    });
+		});
+		$("#undo_move").click(function(){
+			$.ajax({
+		      url: "{{base_url}}/undo_move",
+		      type: "get",
+		      success: function(response) {
+		      	$("#move_list li:last").remove();
+		      },
+		      error: function(xhr) {
+		      }
+		    });
+		});
+		$("#next-tut").click(function(){
+			window.location = "{{base_url}}/tutorial/3";
+		});
+		{% for object in world_objects%}
+			$("#{{object}}").click(function(){
+				{% if object == "cupboard" %}
+					$("#Ans1").css('color', 'green');
+					first = true;
+				{% endif %}
+				$.ajax({
+			      url: "{{base_url}}/showObject",
+			      type: "post",
+			      data: {"object": "{{object}}" },
+			      success: function(response) {
+			      },
+			      error: function(xhr) {
+			      }
+			    });
+			});
+		{% endfor %}
+		function checkIfError() {
+		  $.ajax({
+		    url: '/check_error',
+		    success: function(data) {
+		    	if (data != ""){
+		    		alert(data);
+		    	}
+		    }
+		  });
+		  setTimeout(checkIfError, 1000);
+		}
+
+		$(document).ready(function() {
+		  setTimeout(checkIfError, 1000);
+		});
+		function startTimer(duration, display) {
+		    var timer = duration, minutes, seconds;
+		    setInterval(function () {
+		        minutes = parseInt(timer / 60, 10);
+		        seconds = parseInt(timer % 60, 10);
+
+		        minutes = minutes < 10 ? "0" + minutes : minutes;
+		        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+		        display.textContent = minutes + ":" + seconds;
+
+		        if (--timer < 0) {
+		            timer = duration;
+		            alert("Time Complete");
+		            $('#next-tut').prop('disabled', false);
+		        }
+		    }, 1000);
+		}
+
+		window.onload = function () {
+		    var tenMinutes = 60 * 10,
+		        display = document.querySelector('#time');
+		    startTimer(tenMinutes, display);
+		};
+	</script>
+</body>
+</html>

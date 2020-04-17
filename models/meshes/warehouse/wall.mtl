@@ -1,0 +1,12 @@
+#
+# Bunkspeed OBJ Material File
+# http://www.bunkspeed.com
+#
+
+newmtl Mesh
+Kd 0.8769042 0.8769042 0.8769042
+Ks 0.8769042 0.8769042 0.8769042
+map_Ks wall.jpg
+map_Kd wall.jpg
+illum 2
+Ns 99.90109

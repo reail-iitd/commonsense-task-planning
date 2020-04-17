@@ -1,0 +1,14 @@
+#
+# Bunkspeed OBJ Material File
+# http://www.bunkspeed.com
+#
+
+newmtl brushed_steel
+Kd 1 0.9490196 0.9098039
+Ks 1 0.9490196 0.9098039
+map_Ks diffuse_brushed.dds
+map_Kd swbrushed_bump.jpg
+map_bump -bm 0 swbrushed_bump.jpg
+bump swbrushed_bump.jpg
+illum 2
+Ns 21.17834

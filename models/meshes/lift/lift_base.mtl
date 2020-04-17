@@ -1,0 +1,12 @@
+#
+# Bunkspeed OBJ Material File
+# http://www.bunkspeed.com
+#
+
+newmtl sandblasted_iron
+Kd 0.2666667 0.2666667 0.2666667
+Ks 0.2666667 0.2666667 0.2666667
+map_bump -bm 2 C:\Users\user\Desktop\Robot-task-planning\PyBullet\models\meshes\lift\swsand_bump.jpg
+bump C:\Users\user\Desktop\Robot-task-planning\PyBullet\models\meshes\lift\swsand_bump.jpg
+illum 2
+Ns 4.612315

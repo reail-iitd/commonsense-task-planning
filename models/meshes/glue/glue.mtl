@@ -1,0 +1,22 @@
+#
+# Bunkspeed OBJ Material File
+# http://www.bunkspeed.com
+#
+
+newmtl white_high_gloss_plastic
+Kd 1 1 1
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl color
+Kd 0.7921569 0.8196079 0.9333333
+Ks 1 1 1
+illum 2
+Ns 99.90109
+
+newmtl blue_high_gloss_plastic
+Kd 0.007843138 0.2392157 0.8235294
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109

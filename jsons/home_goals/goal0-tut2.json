@@ -1,0 +1,18 @@
+{
+	"goals":[
+		{
+			"object": "milk",
+			"target": "fridge",
+			"state": "",
+			"position": "",
+			"tolerance": 0
+		},
+		{
+			"object": "fridge",
+			"target": "",
+			"state": "open",
+			"position": "",
+			"tolerance": 0
+		}
+	]
+}

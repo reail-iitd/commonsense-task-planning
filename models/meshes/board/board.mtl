@@ -1,0 +1,12 @@
+#
+# Bunkspeed OBJ Material File
+# http://www.bunkspeed.com
+#
+
+newmtl Cork
+Kd 0.1 0.1 0.1
+map_Kd board.jpg
+Ks 0.1 0.1 0.1
+map_Ks board.jpg
+illum 2
+Ns 2.552935

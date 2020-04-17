@@ -1,0 +1,59 @@
+#
+# Bunkspeed OBJ Material File
+# http://www.bunkspeed.com
+#
+
+newmtl Red_Acrylic
+Kd 0.9504011 0.13274 0.13274
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl Rough_White
+Kd 1 1 1
+Ks 0.5 0.5 0.5
+illum 2
+Ns 1.698105
+
+newmtl Red_Acrylic
+Kd 0.9504011 0.13274 0.13274
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl Orange_Gel
+Kd 1 0.9194835 0
+Ks 1 1 1
+illum 2
+Ns 60.1609
+
+newmtl Blue_Gel
+Kd 0.2294411 0.5334728 0.5446973
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+d 0.4566879
+
+newmtl color
+Kd 0.7921569 0.8196079 0.9333333
+Ks 1 1 1
+illum 2
+Ns 99.90109
+
+newmtl color
+Kd 0.7921569 0.8196079 0.9333333
+Ks 1 1 1
+illum 2
+Ns 99.90109
+
+newmtl color
+Kd 0.7921569 0.8196079 0.9333333
+Ks 1 1 1
+illum 2
+Ns 99.90109
+
+newmtl color
+Kd 0.7921569 0.8196079 0.9333333
+Ks 1 1 1
+illum 2
+Ns 99.90109

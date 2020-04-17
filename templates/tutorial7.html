@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>	
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<title>RoboMove</title>
+</head>
+<body>
+	<div style="padding-left: 2em">
+		<h1>Tutorial</h1>
+		<h3>Actions that the robot can perform</h3>
+		<ol>
+			<li>
+				<h5><strong>Stick object on destination: </strong></h5>
+				<p> This allows the robot to stick one object (source) on the other. As objects cannot be stuck directly, you may want to use the apply action to apply glue on the object to stick it. For example, sticking a paper to the wall using glue.</p>
+				<video style="width: 80%" controls>
+			      <source src="{{base_url}}/static/stick.mp4" type=video/mp4>
+			    </video>
+			</li>
+			<li>
+				<h5><strong>Clean object: </strong></h5>
+				<p>You can clean dirt using this action. You must have the object to be used for cleaning in your hand, when the clean action is called.</p>
+				<video style="width: 80%" controls>
+			      <source src="{{base_url}}/static/clean.mp4" type=video/mp4>
+			    </video>
+			</li>
+		</ol>
+		<a href="{{base_url}}/tutorial/8" class="btn btn-success" style="width: 50%">Next</a>
+	</div>		
+</body>
+</html>

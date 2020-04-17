@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="banana">
+  <link name="base_link">
+    <contact>
+      <lateral_friction value="0.5"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="5"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.57 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="models/meshes/banana/10164_Banana_v01_it2.obj"  scale="0.002 0.002 0.002"/>
+      </geometry>
+      <material name="tray_material">
+        <color rgba="0.93 0.882 0.208 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="1.57 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="models/meshes/banana/10164_Banana_v01_it2.obj" scale="0.002 0.002 0.002"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="tray.SLDPRT">
+  <link
+    name="tray.SLDPRT">
+    <inertial>
+      <origin
+        xyz="-2.8472E-17 1.84601259873727E-17 0.0069104"
+        rpy="0 0 0" />
+      <mass
+        value="2.18496" />
+      <inertia
+        ixx="2.00078859"
+        ixy="2.2885E-19"
+        ixz="2.8E-20"
+        iyy="2.00026969"
+        iyz="7.83334618632542E-20"
+        izz="2.0010458" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="models/meshes/tray/tray.SLDPRT.STL" scale="2 2 2"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29216 0.81961 0.93333 1" />
+        <texture
+          filename="models/textures/" />
+      </material>
+    </visual>
+    <collision concave="yes">
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="models/meshes/tray/tray.SLDPRT.STL" scale="2 2 2" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

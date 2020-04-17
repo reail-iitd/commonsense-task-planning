@@ -1,0 +1,314 @@
+{
+	"entities":[
+		{
+			"name": "floor_warehouse",
+			"position": [0,0,-0.1],
+			"orientation": [],
+			"states": {}
+		},
+		{
+			"name": "wall_warehouse",
+			"position": [-4.5,5,1],
+			"orientation": [],
+			"states": {}
+		},
+		{
+			"name": "ramp",
+			"position": [2.5,4,0],
+			"orientation": [],
+			"states": {}
+		},
+		{
+			"name": "husky",
+			"position": [0,0,0.1],
+			"orientation": [0,0,0,0.1],
+			"states": {}
+		},
+		{
+			"name": "ur5",
+			"position": [0,0,0.320208],
+			"orientation": [],
+			"states": {}
+		},
+		{
+			"name": "table",
+			"position": [1.5, 4.5, 0],
+			"orientation": [],
+			"states": {}
+		},
+		{
+			"name": "tray",
+			"position": [2, 4.5, 0.7],
+			"orientation": [],
+			"states": []	
+		},
+		{
+			"name": "box",
+			"position": [-3.75,-4.5,0],
+			"orientation": [],
+			"states": []	
+		},
+		{
+			"name": "crate_green",
+			"position": [-4,3,1],
+			"orientation": [],
+			"states": []	
+		},
+		{
+			"name": "crate_red",
+			"position": [-4,3,1.6],
+			"orientation": [],
+			"states": []	
+		},
+		{
+			"name": "crate_peach",
+			"position": [1.5,-4.5,0],
+			"orientation": [],
+			"states": []	
+		},
+		{
+			"name": "stick",
+			"position": [4,0.25,0.2],
+			"orientation": [],
+			"states": []	
+		},
+		{
+			"name": "long_shelf",
+			"position": [-4,-3,0],
+			"orientation": [],
+			"states": []	
+		},
+		{
+			"name": "cupboard_back",
+			"position": [-2.5,-5,0],
+			"orientation": [],
+			"states": {},
+			"ignore": "true"
+		},
+		{
+			"name": "cupboard",
+			"position": [-2.5,-4.5,0],
+			"orientation": [],
+			"states": 
+				{
+					"close": [[-2.5, -4.5, 0], [0, 0, 0]],
+					"open": [[-3, -3.7, 0], [0, 0, 1.57]]
+				}
+		},
+		{
+			"name": "lift_base",
+			"position": [-3.5,-0.45,0],
+			"orientation": [],
+			"states": {},
+			"ignore": "true"
+		},
+		{
+			"name": "lift",
+			"position": [-3.5,-0.45,0.9],
+			"orientation": [],
+			"states": 
+				{
+					"down": [[-3.5,-0.45,0.0], [0, 0, 0]],
+					"up": [[-3.5,-0.45,0.9], [0, 0, 0]]
+				}
+		},
+		{
+			"name": "worktable",
+			"position": [-2.5,4.5,1],
+			"orientation": [],
+			"states": []	
+		},
+		{
+			"name": "drill",
+			"position": [-2.5,4.5,1.7],
+			"orientation": [],
+			"states": []	
+		},
+		{
+			"name": "screwdriver",
+			"position": [-2.2,4.5,1.7],
+			"orientation": [],
+			"states": []	
+		},
+		{
+			"name": "nail",
+			"position": [-2.1,4.5,1.7],
+			"orientation": [],
+			"states": []	
+		},
+		{
+			"name": "hammer",
+			"position": [-2.5, -4.75, 1.6],
+			"orientation": [],
+			"states": []	
+		},
+		{
+			"name": "ladder",
+			"position": [3.5,-4,0],
+			"orientation": [0,0,0,0.1],
+			"states": []	
+		},
+		{
+			"name": "trolley",
+			"position": [4,-2.5,0],
+			"orientation": [0,0,0,0.1],
+			"states": []	
+		},
+		{
+			"name": "brick",
+			"position": [-0.5,3.9,1],
+			"orientation": [0,0,0,0.1],
+			"states": []	
+		},
+		{
+			"name": "blow_dryer",
+			"position": [1.2,4.5,0.7],
+			"orientation": [0,0,0,0.1],
+			"states": []	
+		},
+		{
+			"name": "spraypaint",
+			"position": [4,2,0],
+			"orientation": [0,0,0,0.1],
+			"states": []	
+		},
+		{
+			"name": "welder",
+			"position": [4,1.5,0],
+			"orientation": [0,0,0,0.1],
+			"states": []	
+		},
+		{
+			"name": "generator",
+			"position": [-2,5,1],
+			"orientation": [0,0,0,0.1],
+			"states": []	
+		},
+		{
+			"name": "gasoline",
+			"position": [-4,-2, 0],
+			"orientation": [0,0,0,0.1],
+			"states": []	
+		},
+		{
+			"name": "coal",
+			"position": [-3.7, -3, 2],
+			"orientation": [],
+			"states": []	
+		},
+		{
+			"name": "toolbox",
+			"position": [4, -1, 0],
+			"orientation": [],
+			"states": []	
+		},
+		{
+			"name": "wood_cutter",
+			"position": [4, 1, 0],
+			"orientation": [],
+			"states": []	
+		},
+		{
+			"name": "3d_printer",
+			"position": [-3, 4, 1.6],
+			"orientation": [],
+			"states": []	
+		},
+		{
+			"name": "wood",
+			"position": [0.25,-4.5,0],
+			"orientation": [],
+			"states": []	
+		},
+		{
+			"name": "platform",
+			"position": [-4, 1, 1],
+			"orientation": [],
+			"states": []	
+		},
+		{
+			"name": "ramp_tape",
+			"position": [-0.4, 0.6, 0],
+			"orientation": [],
+			"states": []	
+		},
+		{
+			"name": "oil",
+			"position": [1.5,3,0],
+			"orientation": [],
+			"states": {}
+		},
+		{
+			"name": "water",
+			"position": [-2.5, -4.6, 0.7],
+			"orientation": [],
+			"states": {}
+		},
+		{
+			"name": "board",
+			"position": [0.2, 4.2, 0],
+			"orientation": [],
+			"states": 
+			{
+				"stuck": [[-4.3, 3.1, 1.5], [0, 0, 0]]
+			}
+		},
+		{
+			"name": "mop",
+			"position": [-4.3,4.3,1],
+			"orientation": [],
+			"states": {}
+		},
+		{
+			"name": "paper",
+			"position": [-2.5, -4.7, 0.3],
+			"orientation": [],
+			"states": 
+			{
+				"stuck": [[-4.4, 3, 2], [-1.57079632679, 1.57079632679, 1.57079632679]]
+			}
+		},
+		{
+			"name": "glue",
+			"position": [-4, -3, 2],
+			"orientation": [],
+			"states": []	
+		},
+		{
+			"name": "tape",
+			"position": [1.1,4.1,0.7],
+			"orientation": [],
+			"states": {}
+		},
+		{
+			"name": "assembly_station",
+			"position": [-4.1, -1.5, 0.2],
+			"orientation": [],
+			"states": {}
+		},
+		{
+			"name": "part1",
+			"position": [-3.9, -1.5, 0.2],
+			"orientation": [],
+			"states": {}
+		},
+		{
+			"name": "part2",
+			"position": [-3.8, -1.5, 0.2],
+			"orientation": [],
+			"states": {}
+		},
+		{
+			"name": "part3",
+			"position": [1.5, 4.3, 1],
+			"orientation": [],
+			"states": {}
+		},
+		{
+			"name": "stool",
+			"position": [3.7, 2.5, 0.2],
+			"orientation": [],
+			"states": {}
+		}
+	]
+}

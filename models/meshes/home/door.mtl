@@ -1,0 +1,11 @@
+#
+# Bunkspeed OBJ Material File
+# http://www.bunkspeed.com
+#
+
+newmtl satin_finished_maple_2d
+Kd 1 1 1
+map_Kd satin finished maple.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 6.737052

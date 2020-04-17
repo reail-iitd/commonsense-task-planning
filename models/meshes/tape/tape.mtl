@@ -1,0 +1,16 @@
+#
+# Bunkspeed OBJ Material File
+# http://www.bunkspeed.com
+#
+
+newmtl whitesolid
+Kd 0.7294118 0.4509804 0
+Ks 1 1 1
+illum 2
+Ns 99.90109
+
+newmtl glossy_rubber
+Kd 0 1 0
+Ks 1 1 1
+illum 2
+Ns 99.90109

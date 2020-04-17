@@ -1,0 +1,11 @@
+#
+# Bunkspeed OBJ Material File
+# http://www.bunkspeed.com
+#
+
+newmtl color
+Kd 0.7921569 0.8196079 0.9333333
+map_Kd SPONGE_1.JPG
+Ks 1 1 1
+illum 2
+Ns 1.394422

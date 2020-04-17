@@ -1,0 +1,103 @@
+{
+	"Push object to destination": 
+		{
+			"Object to push" : ["light", "floor", "walls", "door", "big-tray", "bigger_table", "smaller_table", "couch", "fridge", "cupboard", "dumpster", "ledge"], 
+			"Destination (near this object)": ["floor", "walls", "fridge_back", "cupboard_back"]
+		},
+	"Pick source and place on destination": 
+		{
+			"Object to pick": ["floor", "dumpster", "ledge", "fridge", "cupboard", "walls", "door", "big-tray", "bigger_table", "smaller_table", "couch", "chair"], 
+			"Object to place on": ["paper2", "light", "floor", "walls", "milk", "tape", "ledge", "door", "cube_red", "greem_cube", "cube_gray"]
+		},
+    "Move robot to object": 
+    	{
+    		"Destination (near this object)": ["floor", "ledge"]
+    	},
+	"Open/Close object":
+		{
+			"Object to open or close": ["paper2", "light", "floor", "bottle_blue", "bottle_gray", "cube_green", "dumpster", "big-tray", "walls", "ledge", "big-tray", "paper", "gray cube", "cube_green","cube_red", "tray", "tray2", "bottle_blue", "bottle_gray", "bottle_red", "box", "apple", "orange", "banana", "quadcopter", "chair", "ball", "stick", "dumpster", "milk", "shelf", "glue", "tape", "bigger_table", "book", "cube_gray", "mop", "smaller_table", "sponge", "vacuum", "couch", "stool", "dirt"],
+			"Open or Close it": ["off", "on", "up", "down"]
+		},
+	"Pick Object": 
+		{
+			"Object to pick": ["light", "floor", "dumpster", "ledge", "fridge", "cupboard", "chair", "walls", "door", "big-tray", "bigger_table", "smaller_table", "couch"]
+		},
+	"Drop Object on destination": 
+		{
+
+			"Object to drop": ["paper2", "light", "floor", "dumpster", "ledge", "fridge", "cupboard", "walls", "door", "big-tray", "bigger_table", "smaller_table", "couch"], 
+			"Object to drop on": ["paper2", "light", "floor", "walls", "milk", "tape", "ledge", "door", "cube_red", "cube_green", "cubr_gray"]
+		},
+	"Climb up an object":
+		{
+			"Object to climb on": ["paper2", "light", "floor", "bluw_bottle", "bottle_gray", "dirt", "cube_green", "dumpster", "big-tray", "walls", "ledge", "big-tray", "paper", "gray cube", "cube_green","cube_red", "tray", "tray2", "bottle_blue", "bottle_gray", "bottle_red", "box", "apple", "orange", "banana", "quadcopter", "chair", "ball", "stick", "dumpster", "milk", "shelf", "glue", "tape", "cupboard", "fridge", "bigger_table", "book", "door", "cube_gray", "mop", "smaller_table", "sponge", "vacuum", "couch", "3d_printer", "assembly_station", "blow_dryer", "brick", "board", "coal", "crate_green", "crate_peach", "crate_red", "drill", "floor_warehouse", "gasoline", "generator", "hammer", "husky", "lift", "long_shelf", "oil", "part1", "part2", "part3", "water", "platform", "ramp", "ramp_tape", "screw", "spraypaint", "table", "toolbox", "trolley", "ur5", "wall_warehouse", "welder", "wood_cutter", "wood", "worktable"]
+		},
+	"Climb down an object":
+		{
+			"Object to climb down from": ["paper2", "light", "floor", "bluw_bottle", "bottle_gray", "dirt", "cube_green", "dumpster", "big-tray", "walls", "ledge", "big-tray", "paper", "gray cube", "cube_green","cube_red", "tray", "tray2", "bottle_blue", "bottle_gray", "bottle_red", "box", "apple", "orange", "banana", "quadcopter", "chair", "ball", "stick", "dumpster", "milk", "shelf", "glue", "tape", "cupboard", "fridge", "bigger_table", "book", "door", "cube_gray", "mop", "smaller_table", "sponge", "vacuum", "couch", "3d_printer", "assembly_station", "blow_dryer", "brick", "board", "coal", "crate_green", "crate_peach", "crate_red", "drill", "floor_warehouse", "gasoline", "generator", "hammer", "husky", "lift", "long_shelf", "oil", "part1", "part2", "part3", "water", "platform", "ramp", "ramp_tape", "screw", "spraypaint", "table", "toolbox", "trolley", "ur5", "wall_warehouse", "welder", "wood_cutter", "wood", "worktable"]
+		},
+	"Apply object on another object":
+		{
+			"Object to apply": ["paper2", "light", "floor", "bottle_blue", "bottle_gray", "cube_green", "dumpster", "big-tray", "walls", "ledge", "big-tray", "paper", "gray cube", "cube_green","cube_red", "tray", "tray2", "bottle_blue", "bottle_gray", "bottle_red", "box", "apple", "orange", "banana", "quadcopter", "chair", "ball", "stick", "dumpster", "milk", "shelf", "cupboard", "fridge", "bigger_table", "book", "door", "cube_gray", "mop", "smaller_table", "sponge", "vacuum", "couch", "stool", "dirt", "3d_printer", "assembly_station", "blow_dryer", "brick", "coal", "crate_green", "crate_peach", "crate_red", "drill", "floor_warehouse", "gasoline", "generator", "hammer", "husky", "lift", "long_shelf", "oil", "part1", "part2", "part3", "water", "platform", "ramp", "ramp_tape", "screw", "spraypaint", "table", "toolbox", "trolley", "ur5", "wall_warehouse", "welder", "wood_cutter", "wood", "worktable", "ladder", "board"],
+			"Object to apply on": ["walls", "floor", "paper2", "light", "floor", "door", "dumpster", "big-tray", "walls", "ledge", "couch", "big-tray", "tray", "tray2", "blue bottle", "gray bottle", "red bottle", "box", "apple", "orange", "banana", "quadcopter", "chair", "ball", "stick", "dumpster", "milk", "shelf", "glue", "tape", "3d_printer", "assembly_station", "blow_dryer", "brick", "board", "coal", "crate_green", "crate_peach", "crate_red", "drill", "floor_warehouse", "gasoline", "generator", "hammer", "husky", "lift", "long_shelf", "oil", "part1", "part2", "part3", "water", "platform", "ramp", "ramp_tape", "screw", "spraypaint", "table", "toolbox", "trolley", "ur5", "welder", "wood_cutter", "wood", "worktable", "cupboard", "wall_warehouse", "ladder", "stool", "mop"]
+		},
+	"Stick object to destination":
+		{
+			"Object to stick": ["paper2", "light", "floor", "door", "dumpster", "big-tray", "walls", "ledge", "couch", "big-tray", "tray", "tray2", "blue bottle", "gray bottle", "red bottle", "box", "apple", "orange", "banana", "quadcopter", "chair", "ball", "stick", "dumpster", "milk", "shelf", "3d_printer", "assembly_station", "blow_dryer", "brick", "coal", "crate_green", "crate_peach", "crate_red", "drill", "floor_warehouse", "gasoline", "generator", "hammer", "husky", "lift", "long_shelf", "oil", "part1", "part2", "part3", "water", "platform", "ramp", "ramp_tape", "screw", "spraypaint", "table", "toolbox", "trolley", "ur5", "welder", "wood_cutter", "wood", "worktable", "cupboard", "wall_warehouse", "ladder", "stool", "mop", "glue", "tape"],
+			"Destination object": ["paper2", "light", "floor", "dumpster", "big-tray", "ledge", "couch", "big-tray", "paper", "gray cube", "green cube","red cube", "tray", "tray2", "blue bottle", "gray bottle", "red bottle", "box", "apple", "orange", "banana", "quadcopter", "chair", "ball", "stick", "dumpster", "milk", "shelf", "glue", "tape", "3d_printer", "assembly_station", "blow_dryer", "brick", "board", "coal", "crate_green", "crate_peach", "crate_red", "drill", "floor_warehouse", "gasoline", "generator", "hammer", "husky", "lift", "long_shelf", "oil", "part1", "part2", "part3", "water", "platform", "ramp", "ramp_tape", "screw", "spraypaint", "table", "toolbox", "trolley", "ur5", "welder", "wood_cutter", "wood", "worktable", "cupboard", "ladder", "stool", "mop", "paper"]
+		},
+	"Clean object":
+		{
+			"Object to clean": ["paper2", "light", "floor", "bottle_blue", "bottle_gray", "cube_green", "dumpster", "big-tray", "walls", "ledge", "big-tray", "paper", "gray cube", "cube_green","cube_red", "tray", "tray2", "bottle_blue", "bottle_gray", "bottle_red", "box", "apple", "orange", "banana", "quadcopter", "chair", "ball", "stick", "dumpster", "milk", "shelf", "glue", "tape", "cupboard", "fridge", "bigger_table", "book", "door", "cube_gray", "mop", "smaller_table", "sponge", "vacuum", "couch", "stool", "3d_printer", "assembly_station", "blow_dryer", "brick", "coal", "crate_green", "crate_peach", "crate_red", "drill", "floor_warehouse", "gasoline", "generator", "hammer", "husky", "lift", "long_shelf", "part1", "part2", "part3", "platform", "ramp", "ramp_tape", "screw", "spraypaint", "table", "toolbox", "trolley", "ur5", "wall_warehouse", "welder", "wood_cutter", "wood", "worktable", "ladder", "board"],
+			"Cleaning agent": ["paper2", "light", "floor", "dumpster", "big-tray", "ledge", "couch", "big-tray", "paper", "gray cube", "green cube","red cube", "tray", "tray2", "blue bottle", "gray bottle", "red bottle", "box", "apple", "orange", "banana", "quadcopter", "chair", "ball", "stick", "dumpster", "milk", "shelf", "glue", "tape", "3d_printer", "assembly_station", "blow_dryer", "brick", "coal", "crate_green", "crate_peach", "crate_red", "drill", "floor_warehouse", "gasoline", "generator", "hammer", "husky", "lift", "long_shelf", "oil", "part1", "part2", "part3", "water", "platform", "ramp", "ramp_tape", "screw", "spraypaint", "table", "toolbox", "trolley", "ur5", "wall_warehouse", "welder", "wood_cutter", "wood", "worktable", "ladder", "board"]
+		},
+	"Switch Object on/off":
+		{
+			"Object to switch state": ["paper2", "stool", "floor", "blue_bottle", "bottle_gray", "dirt", "cube_green", "dumpster", "big-tray", "walls", "ledge", "big-tray", "paper", "gray cube", "cube_green","cube_red", "tray", "tray2", "bottle_blue", "bottle_gray", "bottle_red", "box", "apple", "orange", "banana", "quadcopter", "chair", "ball", "stick", "dumpster", "milk", "shelf", "glue", "tape", "cupboard", "fridge", "bigger_table", "book", "door", "cube_gray", "mop", "smaller_table", "sponge", "vacuum", "couch"],
+			"On or off": ["open", "close"]
+		},
+	"Place Ramp":
+		{
+		},
+	"Move Up the ramp":
+		{
+		},
+	"Move Down the ramp":
+		{
+		},
+	"Drop":
+		{
+			"Object to drop":[]
+		},
+    "Add fuel to object": 
+    	{
+    		"Objects to add fuel to": [], 
+    		"Object to add": []
+    	},
+    "Cut object": 
+    	{
+    		"Objects to cut": [], 
+    		"Cut using": []
+    	},
+    "3D Print object": 
+    	{
+    		"Objects to print": []
+    	},
+    "Drive object": 
+    	{
+    		"Objects to drive": [], 
+    		"Using tool": []
+    	},
+    "Weld object": 
+    	{
+    		"Objects to weld": []
+    	},
+    "Paint object": 
+    	{
+    		"Objects to paint": []
+    	},
+    "Drill object": 
+    	{
+    		"Objects to drill into": []
+    	}
+}

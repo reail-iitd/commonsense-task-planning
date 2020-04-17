@@ -1,0 +1,39 @@
+#
+# Bunkspeed OBJ Material File
+# http://www.bunkspeed.com
+#
+
+newmtl Walnut
+Kd 1 1 1
+map_Kd walnut.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 2.552935
+
+newmtl White_Birch
+Kd 1 1 1
+map_Kd birch.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 28.57038
+
+newmtl White_Birch
+Kd 1 1 1
+map_Kd birch.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 28.57038
+
+newmtl Walnut
+Kd 1 1 1
+map_Kd walnut.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 2.552935
+
+newmtl White_Birch
+Kd 1 1 1
+map_Kd birch.jpg
+Ks 0.5 0.5 0.5
+illum 2
+Ns 28.57038

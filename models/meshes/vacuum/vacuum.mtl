@@ -1,0 +1,10 @@
+#
+# Bunkspeed OBJ Material File
+# http://www.bunkspeed.com
+#
+
+newmtl green_medium_gloss_plastic
+Kd 0.2862745 0.6627451 0.3294118
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109

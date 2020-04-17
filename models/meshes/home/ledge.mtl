@@ -1,0 +1,13 @@
+#
+# Bunkspeed OBJ Material File
+# http://www.bunkspeed.com
+#
+
+newmtl flemish_brick_2d
+Kd 1 1 1
+map_Kd flemish brick.jpg
+Ks 1 1 1
+map_bump -bm 2 flemishbrick_normalmap.dds
+bump flemishbrick_normalmap.dds
+illum 2
+Ns 99.90109

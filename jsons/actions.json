@@ -1,0 +1,177 @@
+{
+	"actions":[
+		{
+			"name": "pickNplaceAonB",
+			"args": ["object", "target"],
+			"execution": [
+				["moveTo", "object"],
+				["changeWing", "up"],
+				["constrain", "object", "ur5"],
+				["moveTo", "target"],
+				["constrain", "object", "target"]
+			]
+		},
+		{
+			"name": "moveAtoB",
+			"args": ["object", "target"],
+			"execution": [
+				["moveTo", "object"],
+				["changeWing", "up"],
+				["constrain", "object", "ur5"],
+				["moveTo", "target"]
+			]
+		},
+		{
+			"name": "push",
+			"args": ["object", "position"],
+			"execution": [
+				["moveTo", "object"],
+				["changeWing", "up"],
+				["constrain", "object", "ur5"],
+				["move", "position"],
+				["removeConstraint", "object", "ur5"]
+			]
+		},
+		{
+			"name": "pushTo",
+			"args": ["object", "target"],
+			"execution": [
+				["moveTo", "object"],
+				["changeWing", "up"],
+				["constrain", "object", "ur5"],
+				["moveTo", "target"],
+				["removeConstraint", "object", "ur5"]
+			]
+		},
+
+		{
+			"name": "changeState",
+			"args": ["object", "state"],
+			"execution": [
+				["moveTo", "object"],
+				["changeWing", "up"],
+				["changeState", "object", "state"]
+			]
+		},
+		{
+			"name": "moveTo",
+			"args": ["target"],
+			"execution": [
+				["moveTo", "target"]
+			]
+		},
+		{
+			"name": "move",
+			"args": ["position"],
+			"execution":[
+				["move", "position"]
+			]
+		},
+		{
+			"name": "pick",
+			"args": ["object"],
+			"execution": [
+				["moveTo", "object"],
+				["changeWing", "up"],
+				["constrain", "object", "ur5"]
+			]
+		},
+		{
+			"name": "place",
+			"args": ["object", "target"],
+			"execution":[
+				["moveTo", "target"],
+				["changeWing", "up"],
+				["constrain", "object", "target"]
+			]
+		},
+		{
+			"name": "dropTo",
+			"args": ["object_list", "target"],
+			"execution":[
+				"constrain", "object_list", "target"
+			]
+		},
+		{
+			"name": "drop",
+			"args": ["object"],
+			"execution":[
+				"removeConstrain", "object"
+			]
+		},
+		{
+			"name": "placeRamp",
+			"args": [],
+			"execution":[
+                ["moveTo", "ramp"],
+                ["changeWing", "up"],
+                ["constrain", "ramp", "ur5"],
+                ["move", [0.5,-0.5,0]],
+                ["constrain", "ramp", "floor_warehouse"]
+            ]
+		},
+		{
+			"name": "moveUp",
+			"args": [],
+			"execution":[
+				["move", [0.5, -0.5, 0]],
+                ["moveZ", [-1.5, 1.5, 1]]
+			]
+		},
+		{
+			"name": "moveDown",
+			"args": [],
+			"execution":[
+				["move", [-0.6, 0.6, 1]],
+                ["moveZ", [0.5, -0.5, 0]]
+			]
+		},
+		{
+			"name": "stick",
+			"args": ["object", "target"],
+			"execution":[
+                ["moveTo", "object"],
+                ["changeWing", "up"],
+                ["constrain", "object", "ur5"],
+                ["moveTo", "target"],
+				["removeConstrain", "object", "ur5"],
+				["changeState", "object", "stuck"]
+			]
+		},
+		{
+			"name": "apply",
+			"args": ["object", "target"],
+			"execution":[
+                ["moveTo", "object"],
+                ["changeWing", "up"],
+                ["constrain", "object", "ur5"],
+                ["moveTo", "target"],
+				["removeConstrain", "object", "ur5"]
+			]
+		},
+		{
+			"name": "climbUp",
+			"args": ["object"],
+			"execution":[
+                ["moveTo", "object"],
+                ["moveZ", "object+Z=0.4"]
+			]
+		},
+		{
+			"name": "climbDown",
+			"args": ["object"],
+			"execution":[
+                [["moveZ", "object-Z"]]
+			]
+		}
+,
+		{
+			"name": "switchOff",
+			"args": ["object"],
+			"execution":[
+                ["moveTo", "object"],
+                ["changeState", "light", "off"]
+            ]
+		}
+	]
+}
