@@ -5,6 +5,7 @@ This implementation contains all the models mentioned in the paper for next-tool
 ## Contents 
 - Introduction
 - Environment Setup
+- Directory Structure
 - Setup Web Interface for Data Collection
 - Dataset
 - Training models
@@ -20,18 +21,19 @@ In order to effectively perform activities in realistic environments like a home
 ```bash
 $ python3 -m venv commonsense_tool
 $ source commonsense_tool/bin/activate
-(commonsense_tool) $ git clone https://github.com/shreshthtuli/Robot-task-planning.git
+(commonsense_tool) $ git clone https://github.com/reail-iitd/commonsense-task-planning.git
 (commonsense_tool) $ cd Robot-task-planning
 (commonsense_tool) $ git checkout release
 (commonsense_tool) $ pip3 install -r requirements.txt
 ```
 
+## Directory Structure
+
 ## Setup Web Interface for Data Collection
 To execute the website that is needed for data collection, use the following command:
 ```bash
-$ python3 app.py --world WORLD --randomize
+$ python3 app.py --randomize
 ```
-WORLD here can be home/factory.
 The website can now be accessed by using the link (http://0.0.0.0:5000/).
 For all the arguments that can be provided look at the help provided,
 
@@ -41,7 +43,7 @@ $ python3 app.py --help
 
 ## Dataset
 
-Download the program dataset [here](https://drive.google.com/file/d/1txrMTiVnhxBhblf6ypGJ_m3jr3MBBlUe/view?usp=sharing).
+Download the dataset [here](https://drive.google.com/open?id=18dmWjDjz3DPYZTFv92vAnMssK2YFZh3j).
 
 Here is how the dataset structure should look like:
 
@@ -56,7 +58,7 @@ dataset
 
 ## Training
 
-All the trained models can be found [here](http://xyz/temp_placeholder). These can be run by setting
+All the trained models can be found [here](https://drive.google.com/open?id=1Kw65B55DehnteO1hwLUk0k1rWw2eCTl0). These can be run by setting
 train variable to false in `train.py`.
 
 All the models mentioned in the paper can be trained through the command
