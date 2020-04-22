@@ -71,6 +71,8 @@ dataset
     └── factory
 ```
 
+The dataset is organized as follows. We have 8 different goals and 10 different world instances for both the domains, home and factory. Each domain has 8 directories corresponding to the goals possible for the domain. These goals itself, contain directories for the 10 different world instances. Each goal for each world instance in a particular domain thus has a number of different human demonstrations, and these are saved in the form of a .datapoint file for each plan. This is a pickled instance of the Datapoint class found in `src/datapoint.py` and contains all the information needed about the plan. Refer to the [class][src/datapoint.py] for more information.
+
 ## Training
 
 All the trained models can be found [here](https://drive.google.com/open?id=1Kw65B55DehnteO1hwLUk0k1rWw2eCTl0). These can be run by setting
