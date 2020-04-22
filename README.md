@@ -31,8 +31,8 @@ $ source commonsense_tool/bin/activate
 | Folder/File                       | Utility 		              
 | --------------------------------- | --------------------------- 
 | app.py 				            | This is the main file to run the data collection platform. This file starts the web server at the default port 5000 on localhost. It starts an instance of PyBullet on the system and exposes the simulator to the user at the appropriate website.
-| train.py                            This is the main file used to train and evaluate all the models as mentioned in the paper.
-| husky_ur5.py                        This is the main file for the PyBullet simulator. It is responsible for loading the PyBullet simulator, running the appropriate action and sending the appropriate exceptions wherever applicable. It also checks if the goal specified has been completed.
+| train.py                          | This is the main file used to train and evaluate all the models as mentioned in the paper.
+| husky_ur5.py                      | This is the main file for the PyBullet simulator. It is responsible for loading the PyBullet simulator, running the appropriate action and sending the appropriate exceptions wherever applicable. It also checks if the goal specified has been completed.
 | src/GNN/CONSTANTS.py				| This file contains the global constant used by the training pipeline like the number of epochs, hidden size used etc.
 | src/GNN/dataset_utils.py          | This file contains the Dataset class, which can be used to process the dataset in any form as required by the training pipeline.
 | src/GNN/\*models 	                | These contain the different PyTorch models that were used for training the system.
