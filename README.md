@@ -81,17 +81,47 @@ train variable to false in `train.py`.
 All the models mentioned in the paper can be trained through the command
 
 ```bash
-$ python3 train.py DOMAIN EMBEDDING MODEL_TYPE
+$ python3 train.py $DOMAIN $TRAINING_TYPE $MODEL_NAME $EXEC_TYPE
 ```
 Here DOMAIN can be home/factory.
-EMBEDDING is the embeddings that will be used by the model
-and can be conceptnet/fasttext.
-All ablated models can also be trained by changing the model variable appropriately and can be found in `src/GNN/models.py` and `src/GNN/action_models.py`. The following table
-contains what the MODEL_TYPE can be along with its name as mentioned in the paper.
 
-| MODEL_TYPE                        | Name of model (as in paper) |
-| --------------------------------- | --------------------------- |
-| agcn-likelihood                   | GGCN+Metric+Attn+L+NT+C+W   |
-| sequence_baseline_metric_att_aseq | GGCN+Metric+Attn+Aseq       |
+TRAINING_TYPE can be as follows:
 
+| TRAINING_TYPE                     | Meaning                     
+| --------------------------------- | --------------------------- 
+| **gcn**                           | Tool prediction model predicting most probable tool using inital state  
+| **gcn_seq**                       | Tool sequence prediction model, which predicts the sequence of tools that will be used in the plan      
+| **action**                        | Action prediction model which does not use the trained tool prediction model
+| **action_tool**                   | Action prediction model which uses the trained tool prediction model
 
+MODEL_NAME specifies the specific PyTorch model that you want to train. Look at `src/GNN/models.py` or `src/GNN/models.py` to specify the name. They are specified here for reference.
+
+| MODEL_NAME                     | Name in paper                     
+| -------------------------------| --------------------------- 
+| GGCN                           | GGCN
+| GGCN_Metric                    | GGCN+Metric
+| GGCN_Metric_Attn               | GGCN+Metric+Attn
+| GGCN_Metric_Attn_L             | GGCN+Metric+Attn+L    
+| GGCN_Metric_Attn_L_NT          | GGCN+Metric+Attn+L+NT
+| GGCN_Metric_Attn_L_NT_C        | GGCN+Metric+Attn+L+NT+C
+| GGCN_Metric_Attn_L_NT_C_W      | GGCN+Metric+Attn+L+NT+C+W
+| Final_\*                       | These are ablated model with the best GGCN_Metric_Attn_L_NT_C_W model - the * component.
+
+EXEC_TYPE can be as follows:
+
+| EXEC_TYPE                         | Meaning                     
+| --------------------------------- | --------------------------- 
+| **train**                         | Tool prediction model predicting most probable tool using inital state  
+| **gcn_seq**                       | Tool sequence prediction model, which predicts the sequence of tools that will be used in the plan      
+| **action**                        | Action prediction model which does not use the trained tool prediction model
+| **action_tool**                   | Action prediction model which uses the trained tool prediction model
+
+To train the best tool prediction model, use the following command
+```bash
+python3 train.py home gcn GGCN_Metric_Attn_L_NT_C train
+```
+
+To train the best tool sequence prediction model, use the following command
+```bash
+python3 train.py home gcn_seq GGCN_Metric_Attn_L_NT_C train
+```
