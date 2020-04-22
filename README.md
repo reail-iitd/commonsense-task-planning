@@ -98,14 +98,14 @@ MODEL_NAME specifies the specific PyTorch model that you want to train. Look at 
 
 | MODEL_NAME                     | Name in paper                     
 | -------------------------------| --------------------------- 
-| GGCN                           | GGCN
-| GGCN_Metric                    | GGCN+Metric
-| GGCN_Metric_Attn               | GGCN+Metric+Attn
-| GGCN_Metric_Attn_L             | GGCN+Metric+Attn+L    
-| GGCN_Metric_Attn_L_NT          | GGCN+Metric+Attn+L+NT
-| GGCN_Metric_Attn_L_NT_C        | GGCN+Metric+Attn+L+NT+C
-| GGCN_Metric_Attn_L_NT_C_W      | GGCN+Metric+Attn+L+NT+C+W
-| Final_\*                       | These are ablated model with the best GGCN_Metric_Attn_L_NT_C_W model - the * component.
+| **GGCN**                           | GGCN
+| **GGCN_Metric**                    | GGCN+Metric
+| **GGCN_Metric_Attn**               | GGCN+Metric+Attn
+| **GGCN_Metric_Attn_L**             | GGCN+Metric+Attn+L    
+| **GGCN_Metric_Attn_L_NT**          | GGCN+Metric+Attn+L+NT
+| **GGCN_Metric_Attn_L_NT_C**        | GGCN+Metric+Attn+L+NT+C
+| **GGCN_Metric_Attn_L_NT_C_W**      | GGCN+Metric+Attn+L+NT+C+W
+| **Final_\***                       | These are ablated model with the best GGCN_Metric_Attn_L_NT_C_W model - the * component.
 
 EXEC_TYPE can be as follows:
 
