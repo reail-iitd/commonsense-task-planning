@@ -30,19 +30,19 @@ $ source commonsense_tool/bin/activate
 ## Directory Structure
 | Folder/File                       | Utility 		              
 | --------------------------------- | --------------------------- 
-| app.py 				            | This is the main file to run the data collection platform. This file starts the web server at the default port 5000 on localhost. It starts an instance of PyBullet on the system and exposes the simulator to the user at the appropriate website.
-| train.py                          | This is the main file used to train and evaluate all the models as mentioned in the paper.
-| husky_ur5.py                      | This is the main file for the PyBullet simulator. It is responsible for loading the PyBullet simulator, running the appropriate action and sending the appropriate exceptions wherever applicable. It also checks if the goal specified has been completed.
-| src/GNN/CONSTANTS.py				| This file contains the global constant used by the training pipeline like the number of epochs, hidden size used etc.
-| src/GNN/dataset_utils.py          | This file contains the Dataset class, which can be used to process the dataset in any form as required by the training pipeline.
-| src/GNN/\*models 	                | These contain the different PyTorch models that were used for training the system.
-| src/datapoint.py 				    | This contains the datapoint class. All datapoints found in the dataset are an instance of this class.
-| jsons/embeddings                  | These contain the files corresponding to [fasttext](https://fasttext.cc/docs/en/english-vectors.html) and [conceptnet](https://github.com/commonsense/conceptnet-numberbatch) embeddings.
-| jsons/\*\_goals                   | These contain the goals which can be completed by the robot in the factory and the home domain.
-| jsons/\*\_worlds      	        | These contain the different world instances in the home and factory domain.
-| jsons/\*.json 					| These are configuration files for the simulator and the webapp. These define the different actions possible in the simulator, the different objects present in the simulator, states possible, readable form of actions to show on the webapp etc.
-| models/\*                         | This folder contains the stl and urdf files for all models which are loaded by the physics simulator used i.e Pybullet.
-| templates/*						| These are the templates that are used by the webapp to load the different tutorial webpages along with the actual data collection platform.
+| *app.py* 				            | This is the main file to run the data collection platform. This file starts the web server at the default port 5000 on localhost. It starts an instance of PyBullet on the system and exposes the simulator to the user at the appropriate website.
+| *train.py*                        | This is the main file used to train and evaluate all the models as mentioned in the paper.
+| *husky_ur5.py*                    | This is the main file for the PyBullet simulator. It is responsible for loading the PyBullet simulator, running the appropriate action and sending the appropriate exceptions wherever applicable. It also checks if the goal specified has been completed.
+| *src/GNN/CONSTANTS.py*			| This file contains the global constant used by the training pipeline like the number of epochs, hidden size used etc.
+| *src/GNN/dataset_utils.py*        | This file contains the Dataset class, which can be used to process the dataset in any form as required by the training pipeline.
+| *src/GNN/\*models* 	            | These contain the different PyTorch models that were used for training the system.
+| *src/datapoint.py* 				| This contains the datapoint class. All datapoints found in the dataset are an instance of this class.
+| *jsons/embeddings*                | These contain the files corresponding to [fasttext](https://fasttext.cc/docs/en/english-vectors.html) and [conceptnet](https://github.com/commonsense/conceptnet-numberbatch) embeddings.
+| *jsons/\*\_goals*                 | These contain the goals which can be completed by the robot in the factory and the home domain.
+| *jsons/\*\_worlds*      	        | These contain the different world instances in the home and factory domain.
+| *jsons/\*.json*					| These are configuration files for the simulator and the webapp. These define the different actions possible in the simulator, the different objects present in the simulator, states possible, readable form of actions to show on the webapp etc.
+| *models/\**                       | This folder contains the stl and urdf files for all models which are loaded by the physics simulator used i.e Pybullet.
+| *templates/\**				    | These are the templates that are used by the webapp to load the different tutorial webpages along with the actual data collection platform.
 
 ## Setup Web Interface for Data Collection
 To execute the website that is needed for data collection, use the following command:
