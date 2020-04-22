@@ -49,8 +49,8 @@ $ source commonsense_tool/bin/activate
 | src/datapoint.py 				    | This contains the datapoint class. All datapoints found in the dataset are
 |									| an instance of this class.
 | jsons/embeddings                  | These contain the files corresponding to
-|									| fasttext[https://fasttext.cc/docs/en/english-vectors.html] and conceptnet 
-|									| [https://github.com/commonsense/conceptnet-numberbatch] embeddings.
+|									| [fasttext](https://fasttext.cc/docs/en/english-vectors.html) and [conceptnet] 
+|									| (https://github.com/commonsense/conceptnet-numberbatch) embeddings.
 | jsons/\*\_goals                   | These contain the goals which can be completed by the robot
 |									| in the factory and the home domain.
 | jsons/\*\_worlds      	        | These contain the different world instances in the home
