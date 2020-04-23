@@ -22,8 +22,7 @@ In order to effectively perform activities in realistic environments like a home
 $ python3 -m venv commonsense_tool
 $ source commonsense_tool/bin/activate
 (commonsense_tool) $ git clone https://github.com/reail-iitd/commonsense-task-planning.git
-(commonsense_tool) $ cd Robot-task-planning
-(commonsense_tool) $ git checkout release
+(commonsense_tool) $ cd commonsense-task-planning
 (commonsense_tool) $ pip3 install -r requirements.txt
 ```
 
