@@ -24,69 +24,19 @@ base_url = ""
 app = Flask(__name__)
 moves_to_show = []
 
-dict_of_predicates = {
-		# "Move object to destination":{"source-object" : "dropdown-objects", "destination (near object)": "dropdown-objects"},
-		"Push object to destination": {"Object to push" : "dropdown-objects", "Destination (near this object)": "dropdown-objects"},
-		"Pick source and place on destination": {"Object to pick": "dropdown-objects", "Object to place on": "dropdown-objects"},
-        "Move robot to object" : {"Destination (near this object)": "dropdown-objects"},
-        "Open/Close object" : {"Object to open or close": "dropdown-objects", "Open or Close it": "dropdown-states"},
-        "Pick Object": {"Object to pick": "dropdown-objects"},
-        "Drop Object on destination": {"Object to drop": "dropdown-objects", "Object to drop on": "dropdown-objects"},
-        "Climb up an object": {"Object to climb on": "dropdown-objects"},
-        "Climb down an object": {"Object to climb down from": "dropdown-objects"},
-        "Apply object on another object": {"Object to apply": "dropdown-objects", "Object to apply on": "dropdown-objects"},
-        "Stick object to destination": {"Object to stick": "dropdown-objects", "Destination object to stick on": "dropdown-objects"},
-        "Clean object": {"Object to clean": "dropdown-objects"},
-        "Switch Object on/off": {"Object to switch state": "dropdown-objects", "On or off": "dropdown-states"},
-        "Drop": {"Object to drop": "dropdown-objects"},
-        "Place Ramp": {},
-        "Move Up the ramp": {},
-        "Move Down the ramp": {},
-        "Add fuel to object": {"Objects to add fuel to": "dropdown-objects", "Object to add": "dropdown-objects"},
-        "Cut object": {"Objects to cut": "dropdown-objects", "Cut using": "dropdown-objects"},
-        "3D Print object": {"Objects to print": "dropdown-objects"},
-        "Drive object": {"Objects to drive": "dropdown-objects", "Using tool": "dropdown-objects"},
-        "Weld object": {"Objects to weld": "dropdown-objects"},
-        "Paint object": {"Objects to paint": "dropdown-objects"},
-        "Drill object": {"Objects to drill into": "dropdown-objects"}
-    }
+# All actions that need to be showed on the user screen.
+dict_of_predicates = json.load("jsons/predicates_for_webapp.json")["dict_of_predicates"]
 
-dict_predicate_to_action = {
-    # "Move object to destination": "moveAToB",
-    "Push object to destination": "pushTo",
-    "Pick source and place on destination": "pickNplaceAonB",
-    "Move robot to object": "moveTo",
-    "Open/Close object" : "changeState",
-    "Pick Object": "pick",
-    "Drop Object on destination": "dropTo",
-    "Climb up an object": "climbUp",
-    "Climb down an object": "climbDown",
-    "Apply object on another object": "apply",
-    "Stick object to destination": "stick",
-    "Clean object": "clean",
-    "Switch Object on/off": "changeState",
-    "Drop": 'drop',
-    "Place Ramp": 'placeRamp',
-    "Move Up the ramp": 'moveUp',
-    "Move Down the ramp": 'moveDown',
-    "Add fuel to object": 'fuel',
-    "Cut object": 'cut',
-    "3D Print object": 'print',
-    "Drive object":'drive',
-    "Weld object": 'weld',
-    "Paint object": 'paint',
-    "Drill object": 'drill'
-}
-GOAL_LIST = ["jsons/factory_goals/goal1-crates-platform.json", "jsons/factory_goals/goal2-paper-wall.json",\
-            "jsons/factory_goals/goal3-board-wall.json", "jsons/factory_goals/goal4-generator-on.json",\
-            "jsons/factory_goals/goal5-assemble-parts.json", "jsons/factory_goals/goal6-tools-workbench.json",\
-            "jsons/factory_goals/goal7-clean-water.json", "jsons/factory_goals/goal8-clean-oil.json"]
-WORLD_LIST = ["jsons/factory_worlds/world_factory0.json", "jsons/factory_worlds/world_factory1.json",\
-                "jsons/factory_worlds/world_factory2.json", "jsons/factory_worlds/world_factory3.json",\
-                "jsons/factory_worlds/world_factory4.json", "jsons/factory_worlds/world_factory5.json",\
-                "jsons/factory_worlds/world_factory6.json", "jsons/factory_worlds/world_factory7.json",\
-                "jsons/factory_worlds/world_factory8.json", "jsons/factory_worlds/world_factory9.json"]
-# Unnecessary (can be removed)
+# Mapping of user action to the simulator action.
+dict_predicate_to_action = json.load("jsons/predicates_for_webapp.json")["dict_predicate_to_action"]
+
+# The list of goals that are possible for the simulator to execute.
+GOAL_LIST = json.load("jsons/predicates_for_webapp.json")["GOAL_LIST"]
+
+# The list of world instances that can be loaded by the simulator.
+WORLD_LIST = json.load("jsons/predicates_for_webapp.json")["WORLD_LIST"]
+
+# Load all objects reqiured
 d = json.load(open(args.world))["entities"]
 world_objects = []
 renamed_objects = {}
@@ -115,6 +65,11 @@ def convertActionsFromFile(action_file):
     return(inp)
 
 def simulator(queue_from_webapp_to_simulator, queue_from_simulator_to_webapp, queue_for_error, queue_for_execute_to_stop, queue_for_execute_is_ongoing):
+    """
+        The simulator loop accepting inputs from the user and sending it to the simulator.
+        Also sends exception the web app for showing.
+    """
+
     import husky_ur5
     import src.actions
     import sys
@@ -370,4 +325,5 @@ if __name__ == '__main__':
     p = mp.Process(target=simulator, args=(queue_from_webapp_to_simulator,queue_from_simulator_to_webapp,queue_for_error, queue_for_execute_to_stop, queue_for_execute_is_ongoing))
     p.start()
     should_webapp_start = queue_from_simulator_to_webapp.get()
+    # The ip address where to host the simulator can be changed here.
     app.run(host='0.0.0.0', threaded=True)

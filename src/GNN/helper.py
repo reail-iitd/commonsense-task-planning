@@ -11,6 +11,7 @@ from src.GNN.CONSTANTS import *
 import dgl.function as fn
 
 class HeteroRGCNLayer(nn.Module):
+    # The GCN layer which has been borrowed from DGL. Contains a link to the source module.
     # Source = https://docs.dgl.ai/en/0.4.x/tutorials/hetero/1_basics.html
     def __init__(self, in_size, out_size, etypes, activation):
         super(HeteroRGCNLayer, self).__init__()
@@ -27,6 +28,7 @@ class HeteroRGCNLayer(nn.Module):
         return self.activation(G.nodes['object'].data['h'])
 
 class GatedHeteroRGCNLayer(nn.Module):
+    # The Gated GCN layer which has been borrowed from DGL. Contains a link to the source module.
     # Source = https://docs.dgl.ai/_modules/dgl/nn/pytorch/conv/gatedgraphconv.html#GatedGraphConv
     def __init__(self, in_size, out_size, etypes, activation):
         super(GatedHeteroRGCNLayer, self).__init__()

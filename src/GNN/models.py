@@ -4,6 +4,11 @@ from src.GNN.helper import *
 from src.utils import *
 
 class DGL_Simple_Likelihood(nn.Module):
+    """ 
+        The best performing model for the one-step tool prediction task. 
+        Separate likelihood prediction of no tool for more robust tool output considering any tool 
+        to be used or not as prior. 
+    """
     def __init__(self,
                  in_feats,
                  n_objects,
@@ -66,6 +71,10 @@ class DGL_Simple_Likelihood(nn.Module):
         return output
 
 class GGCN(nn.Module):
+    """ 
+    Baseline model using hetero gated graph convolution to encode world state. 
+    Uses goal and world representations to predict tool likelihood estimates.   
+    """
     def __init__(self,
                  in_feats,
                  n_objects,
@@ -101,6 +110,10 @@ class GGCN(nn.Module):
         return h
 
 class GGCN_Metric(nn.Module):
+    """ 
+        Uses metric properties of objects as well to incorporate metric dependencies in tool prediction.
+        GGCN+Metric
+    """
     def __init__(self,
                  in_feats,
                  n_objects,
@@ -140,6 +153,12 @@ class GGCN_Metric(nn.Module):
         return h
 
 class GGCN_Metric_Attn(nn.Module):
+    """
+        Uses goal object conditioned bahdanau style attention for focused 
+        representation by diminishing activation of object embeddings not 
+        related to the goal objects
+        GGCN+Metric+Attention
+    """
     def __init__(self,
                  in_feats,
                  n_objects,
@@ -183,6 +202,11 @@ class GGCN_Metric_Attn(nn.Module):
         return h
 
 class GGCN_Metric_Attn_L(nn.Module):
+    """ 
+        Predicts likelihood of each tool independently using tool embeddings, 
+        which are then stacked together for MLP tool
+        GGCN+Metric+Attn+L
+    """
     def __init__(self,
                  in_feats,
                  n_objects,
@@ -235,6 +259,10 @@ class GGCN_Metric_Attn_L(nn.Module):
         return tools
 
 ######################################################################################
+
+# The following models contain the ablation, where the final model has one of the 
+# components missing. We show that the model is able to perform much better than 
+# any ablated model, and each component is important for the accuracy of the model.
 
 class Final_Metric(nn.Module):
     def __init__(self,

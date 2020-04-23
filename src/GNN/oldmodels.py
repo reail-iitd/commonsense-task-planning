@@ -6,6 +6,8 @@ import torch.nn.functional as F
 import dgl.function as fn
 from torch.nn import init
 
+# This model contains models which were not used in the final implementation
+
 class GraphEncoder(nn.Module):
     def __init__(self, args, goal_bit = False):
         self.args = args

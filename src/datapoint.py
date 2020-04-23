@@ -63,6 +63,9 @@ class Datapoint:
 		self.time = 0
 
 	def addPoint(self, pos, sticky, fixed, cleaner, action, cons, metric, on, clean, stick, welded, drilled, painted, fueled, cut):
+		"""
+			Add next state features in datapoint
+		"""
 		self.position.append(deepcopy(pos))
 		self.sticky.append(deepcopy(sticky))
 		self.fixed.append(deepcopy(fixed))
@@ -80,9 +83,11 @@ class Datapoint:
 		self.cut.append(deepcopy(cut))
 
 	def addSymbolicAction(self, HLaction):
+		# Add symbolic action
 		self.symbolicActions.append(HLaction)
 
 	def toString(self, delimiter='\n', subSymbolic=False, metrics=False):
+		# Convert datapoint to string
 		string = "World = " + self.world + "\nGoal = " + self.goal
 		string += '\nSymbolic actions:\n'
 		for action in self.symbolicActions:
@@ -114,6 +119,7 @@ class Datapoint:
 		return string
 
 	def readableSymbolicActions(self):
+		# Convert datapoint to human readable string
 		string = 'Symbolic actions:\n\n'
 		for action in self.symbolicActions:
 			if str(action[0]) == 'E' or str(action[0]) == 'U':
@@ -129,6 +135,13 @@ class Datapoint:
 		return string
 
 	def getGraph(self, index=0, distance=False, sceneobjects=[], embeddings={}):
+		"""
+			Generate graph from datapoint's metric propoerties. Construct nodes from objects
+			and use conceptnet/fasttext embeddings with object size and position as node features.
+			Use state information like on/off, open/close, sticky/not sticky, etc. based on
+			object properties to determine node state. For graph edges, we use following semantic
+			relations: close, inside, on and stuck.
+		"""
 		world = 'home' if 'home' in self.world else 'factory' if 'factory' in self.world else 'outdoor'
 		metrics = self.metrics[index]
 		sceneobjects = list(metrics.keys()) if len(sceneobjects) == 0 else sceneobjects
@@ -202,6 +215,7 @@ class Datapoint:
 		return {'graph_'+str(index): {'nodes': nodes, 'edges': edges}}
 
 	def getAugmentedGraph(self, index=0, distance=False, remove=5):
+		# Augment dataset by removing objects unrelated to goal
 		allObjects = list(self.metrics[index].keys())
 		actionObjects = []
 		for action in self.actions:
@@ -217,6 +231,7 @@ class Datapoint:
 		return self.getGraph(index, distance, sceneobjects=allObjects)
 
 	def getTools(self, returnNoTool=False):
+		# Returns the set of tools used in the plan corresponding to this datapoint
 		goal_objects = getGoalObjects(self.world, self.goal)
 		usedTools = []
 		for action in self.actions:
@@ -228,6 +243,7 @@ class Datapoint:
 		return usedTools
 
 	def totalTime(self):
+		# Get approximate time taken for executing the plan corresponding to this datapoint
 		time = 0
 		for i in range(len(self.actions)):
 			action = self.actions[i][0]

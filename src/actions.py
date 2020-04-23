@@ -5,7 +5,7 @@ def convertActions(inp, world):
 
     for high_level_action in inp['actions']:
         args = high_level_action['args']
-        print("Action", high_level_action['name'], args)
+        # print("Action", high_level_action['name'], args)
         if high_level_action['name'] == 'pickNplaceAonB':
             action_list.extend([
                 ["moveTo", args[0]],

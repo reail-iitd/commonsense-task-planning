@@ -160,6 +160,7 @@ def start(input_args):
 #   print(obj, p.getAABB(id_lookup[obj]))
 
 def changeView(direction):
+  # Change view of camera
   global x1, y1, o1, world_states, dist, yaw, pitch, camX, camY, imageCount, perspective, on
   camTargetPos = [x1, y1, 0]
   dist = dist - 0.5 if direction == "in" else dist + 0.5 if direction == "out" else dist
@@ -170,6 +171,7 @@ def changeView(direction):
 
 
 def showObject(obj):
+  # Show a close up view of an object in the world
   global world_states, x1, y1, o1, imageCount, on
   if not obj in id_lookup.keys():
     raise Exception("Object not in world, print it first")
@@ -181,6 +183,7 @@ def showObject(obj):
   firstImage()
 
 def undo():
+  # Undo last action
   global world_states, x1, y1, o1, imageCount, constraints, on, datapoint
   datapoint.addSymbolicAction("Undo")
   datapoint.addPoint(None, None, None, None, 'Undo', None, None, None, None, None, None, None, None, None, None)
@@ -188,6 +191,7 @@ def undo():
   _, imageCount = saveImage(0, imageCount, perspective, ax, o1, cam, dist, yaw, pitch, camTargetPos, wall_id, on)
 
 def firstImage():
+  # Create first image for webapp
   global x1, y1, o1, world_states, dist, yaw, pitch, camX, camY, imageCount, on
   z = 1 if p.getBasePositionAndOrientation(id_lookup['husky'])[0][2] > 0.5 else 0
   camTargetPos = [x1, y1, z]
@@ -196,6 +200,10 @@ def firstImage():
 keyboard = False
 
 def executeHelper(actions, goal_file=None, queue_for_execute_to_stop = None, saveImg = True):
+  """
+    Main execution function which implements symbolic and metric checking for each action using 
+    PyBullet physics engine
+  """
   global x1, y1, o1, world_states, dist, yaw, pitch, camX, camY, imageCount, cleaner, on, datapoint, clean, stick, keyboard, drilled, welded, painted, fueled, cut
   # List of low level actions
   datapoint.addSymbolicAction(actions['actions'])
@@ -566,6 +574,7 @@ def execute(actions, goal_file=None, queue_for_execute_to_stop = None, saveImg =
     raise e
 
 def saveDatapoint(filename):
+  # Save datapoint object to file
   global datapoint
   f = open(filename + '.datapoint', 'wb')
   pickle.dump(datapoint, f)
@@ -573,12 +582,16 @@ def saveDatapoint(filename):
   f.close()
 
 def getDatapoint():
+  # Returns the datapoint generated for the current execition
   return datapoint
 
 def destroy():
+  # Destroys the pybullet connection
   p.disconnect()
                       
 def executeAction(inp):
+  # Execute a custom input from user specified in jsons/input.json
+  # Specified by --input at run time
     if execute(convertActionsFromFile(inp), args.goal, saveImg=False):
     	print("Goal Success!!!")
     else:

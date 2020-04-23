@@ -3,10 +3,14 @@ import numpy as np
 import torch
 from copy import deepcopy
 from sys import argv
+# Contains all the constants used by the model. These are global constants.
 
-domain = argv[1] if len(argv) > 1 else 'home'
-embedding = argv[2] if len(argv) > 2 else "conceptnet" 
+domain = argv[1] # can be 'home' or 'factory'
 
+# The embedding type which is used by model. Can be conceptnet or fasttext.
+embedding = "conceptnet" if (("_C" in argv[3]) ^ ("Final" in argv[3])) or "Action" in argv[3] else "fasttext"
+
+# These are the states that are possible for any object. Only the ones possessed bu the object are 1. Other are 0.
 STATES = ["Outside", "Inside", "On", "Off", "Close", "Open", "Up", "Down", "Sticky", "Non_Sticky", "Dirty", "Clean", "Grabbed", "Free", "Welded", "Not_Welded", "Drilled", "Not_Drilled", "Driven", "Not_Driven", "Fueled", "Not_Fueled", "Cut", "Not_Cut", "Painted", "Not_Painted", "Different_Height", "Same_Height"]
 if domain == 'factory': STATES += ['To_Print', "Printed"]
 
@@ -15,6 +19,7 @@ state2indx = {}
 for i,state in enumerate(STATES):
 	state2indx[state] = i
 
+# All the edges that are possible in the graph.
 EDGES = ["Close", "Inside", "On", "Stuck"]
 N_EDGES = len(EDGES)
 edge2idx = {}

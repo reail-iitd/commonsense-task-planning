@@ -214,7 +214,7 @@ def isInState(enclosure, state, position):
     """
     positionAndOrientation = state
     q=p.getQuaternionFromEuler(positionAndOrientation[1])
-    ((x1, y1, z1), (a1, b1, c1, d1)) = position
+    ((x1, y1, z1), (a1, b1, c1, d1)) = position if len(position[1]) > 0 else [position[0], q]
     ((x2, y2, z2), (a2, b2, c2, d2)) = (positionAndOrientation[0], q)
     closed = (abs(x2-x1) <= 0.07 and 
             abs(y2-y1) <= 0.07 and 
