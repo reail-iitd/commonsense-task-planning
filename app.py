@@ -25,16 +25,16 @@ app = Flask(__name__)
 moves_to_show = []
 
 # All actions that need to be showed on the user screen.
-dict_of_predicates = json.load("jsons/predicates_for_webapp.json")["dict_of_predicates"]
+dict_of_predicates = json.load(open("jsons/predicates_for_webapp.json", "r"))["dict_of_predicates"]
 
 # Mapping of user action to the simulator action.
-dict_predicate_to_action = json.load("jsons/predicates_for_webapp.json")["dict_predicate_to_action"]
+dict_predicate_to_action = json.load(open("jsons/predicates_for_webapp.json","r"))["dict_predicate_to_action"]
 
 # The list of goals that are possible for the simulator to execute.
-GOAL_LIST = json.load("jsons/predicates_for_webapp.json")["GOAL_LIST"]
+GOAL_LIST = json.load(open("jsons/predicates_for_webapp.json", "r"))["GOAL_LIST"]
 
 # The list of world instances that can be loaded by the simulator.
-WORLD_LIST = json.load("jsons/predicates_for_webapp.json")["WORLD_LIST"]
+WORLD_LIST = json.load(open("jsons/predicates_for_webapp.json", "r"))["WORLD_LIST"]
 
 # Load all objects reqiured
 d = json.load(open(args.world))["entities"]
