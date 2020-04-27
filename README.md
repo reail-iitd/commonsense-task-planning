@@ -76,8 +76,9 @@ The dataset is organized as follows. We have 8 different goals and 10 different 
 
 ## Training
 
-All the trained models can be found [here](https://drive.google.com/open?id=1Kw65B55DehnteO1hwLUk0k1rWw2eCTl0). These can be run by setting
-train variable to false in `train.py`.
+Please ensure that the dataset is downloaded before proceeding with this step.
+
+All the trained models can be found [here](https://drive.google.com/open?id=1Kw65B55DehnteO1hwLUk0k1rWw2eCTl0). 
 
 All the models mentioned in the paper can be trained through the command
 
