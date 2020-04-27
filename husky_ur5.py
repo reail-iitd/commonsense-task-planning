@@ -14,11 +14,14 @@ from src.datapoint import Datapoint
 from operator import sub
 import math
 import pickle
+import os
 
 object_file = "jsons/objects.json"
 wings_file = "jsons/wings.json"
 tolerance_file = "jsons/tolerance.json"
 goal_file = "jsons/goal.json"
+
+if not os.path.exists("logs"): os.mkdir("logs")
 
 #Number of steps before image capture
 COUNTER_MOD = 50
