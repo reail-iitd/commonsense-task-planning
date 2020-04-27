@@ -59,7 +59,7 @@ $ python3 app.py --help
 
 ## Dataset
 
-Download the dataset [here](https://drive.google.com/open?id=18dmWjDjz3DPYZTFv92vAnMssK2YFZh3j).
+Download the dataset [here](https://drive.google.com/open?id=18dmWjDjz3DPYZTFv92vAnMssK2YFZh3j). Unzip it and put in the repository folder.
 
 Here is how the dataset structure should look like:
 
