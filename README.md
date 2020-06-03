@@ -22,8 +22,7 @@ In order to effectively perform activities in realistic environments like a home
 $ python3 -m venv commonsense_tool
 $ source commonsense_tool/bin/activate
 (commonsense_tool) $ git clone https://github.com/reail-iitd/commonsense-task-planning.git
-(commonsense_tool) $ cd Robot-task-planning
-(commonsense_tool) $ git checkout release
+(commonsense_tool) $ cd commonsense-task-planning
 (commonsense_tool) $ pip3 install -r requirements.txt
 ```
 
@@ -60,7 +59,7 @@ $ python3 app.py --help
 
 ## Dataset
 
-Download the dataset [here](https://drive.google.com/open?id=18dmWjDjz3DPYZTFv92vAnMssK2YFZh3j).
+Download the dataset [here](https://drive.google.com/open?id=18dmWjDjz3DPYZTFv92vAnMssK2YFZh3j). Unzip it and put in the repository folder.
 
 Here is how the dataset structure should look like:
 
@@ -77,8 +76,9 @@ The dataset is organized as follows. We have 8 different goals and 10 different 
 
 ## Training
 
-All the trained models can be found [here](https://drive.google.com/open?id=1Kw65B55DehnteO1hwLUk0k1rWw2eCTl0). These can be run by setting
-train variable to false in `train.py`.
+Please ensure that the dataset is downloaded before proceeding with this step.
+
+All the trained models can be found [here](https://drive.google.com/open?id=1Kw65B55DehnteO1hwLUk0k1rWw2eCTl0). 
 
 All the models mentioned in the paper can be trained through the command
 
