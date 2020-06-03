@@ -4,6 +4,7 @@ from src.GNN.dataset_utils import *
 import random
 import numpy as np
 from os import path
+import os
 from tqdm import tqdm
 from sys import argv
 import approx
@@ -498,11 +499,15 @@ def convert_model(filename, training_type):
 
 if __name__ == '__main__':
 	data = load_dataset()
-	model, modelEnc = get_model(model_name)
 	seqTool = 'Seq_' if training == 'gcn_seq' else ''
-	model, modelEnc, optimizer, epoch, accuracy_list = load_model(seqTool + model.name + "_Trained", model, modelEnc)
-	# model, modelEnc, optimizer, epoch, accuracy_list = load_model("GGCN_256_5_0", model, modelEnc)
 	train_set, test_set = split_data(data)
+	
+	if not path.exists(MODEL_SAVE_PATH):
+		os.makedirs(MODEL_SAVE_PATH)
+	if exec_type != "ablation":
+		model, modelEnc = get_model(model_name)
+		model, modelEnc, optimizer, epoch, accuracy_list = load_model(seqTool + model.name + "_Trained", model, modelEnc)
+	# model, modelEnc, optimizer, epoch, accuracy_list = load_model("GGCN_256_5_0", model, modelEnc)
 
 	if exec_type == "train":
 		print ("Training " + model.name + " with " + embedding)
@@ -545,13 +550,13 @@ if __name__ == '__main__':
 		embeddings, object2vec, object2idx, idx2object, tool_vec, goal2vec, goalObjects2vec = compute_constants("fasttext")
 		for i in ["Final_C_256_5_Trained"]:
 			model, _ = get_model('_'.join(i.split("_")[:-3]))
-			model, _, _, _, _ = load_model(i, model, None)
+			model, _, _, _, _ = load_model(domain + "/" + i, model, None)
 			print(i, gen_score(model, testFast))
 		embeddings, object2vec, object2idx, idx2object, tool_vec, goal2vec, goalObjects2vec = compute_constants("conceptnet")
 		for i in ["Final_Attn_256_5_Trained", "Final_L_256_5_Trained", "Final_Metric_256_5_Trained",\
 					"Final_NT_256_5_Trained"]:
 			model, _ = get_model('_'.join(i.split("_")[:-3]))
-			model, _, _, _, _ = load_model(i, model, None)
+			model, _, _, _, _ = load_model(domain + "/" + i, model, None)
 			print(i, gen_score(model, testFast))
 
 	elif exec_type == "policy":
