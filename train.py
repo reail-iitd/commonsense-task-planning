@@ -451,7 +451,7 @@ def load_model(filename, model, modelEnc):
 	lr = 0.0005 if 'action' in training else 0.00005
 	if training == 'gcn_seq': lr = 0.0005
 	optimizer = torch.optim.Adam(model.parameters() , lr=lr)
-	file_path = MODEL_SAVE_PATH + "/" + filename + ".ckpt"
+	file_path = MODEL_SAVE_PATH + "/" + str(domain) + "/" + filename + ".ckpt"
 	if path.exists(file_path):
 		checkpoint = torch.load(file_path)
 		model.load_state_dict(checkpoint['model_state_dict'])
