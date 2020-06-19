@@ -139,3 +139,21 @@ To train the best tool sequence prediction model, use the following command
 python3 train.py home gcn_seq GGCN_Metric_Attn_L_NT_C train
 ```
 
+## License
+
+BSD-2-Clause. 
+Copyright (c) 2020, Rajas Basal, Shreshth Tuli, Rohan Paul, Mausam
+All rights reserved.
+
+See License file for more details.
+
+## Cite this work
+
+```
+@article{bansal2020toolnet,
+  title={ToolNet: Using Commonsense Generalization for Predicting Tool Use for Robot Plan Synthesis},
+  author={Bansal, Rajas and Tuli, Shreshth and Paul, Rohan and Mausam},
+  journal={arXiv preprint arXiv:2006.05478},
+  year={2020}
+}
+```
