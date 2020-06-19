@@ -148,7 +148,7 @@ All rights reserved.
 See License file for more details.
 
 ## Cite this work
-
+Paper available at <i>arxiv</i>: http://arxiv.org/abs/2006.05478.
 ```
 @article{bansal2020toolnet,
   title={ToolNet: Using Commonsense Generalization for Predicting Tool Use for Robot Plan Synthesis},
