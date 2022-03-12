@@ -14,7 +14,7 @@ MarkupSafe==1.1.1
 matplotlib==3.2.1
 networkx==2.4
 numpy==1.18.2
-Pillow==7.1.1
+Pillow==9.0.1
 pybullet==2.7.2
 pyparsing==2.4.7
 python-dateutil==2.8.1
